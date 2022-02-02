@@ -6,18 +6,17 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+@Tag("simple")
 public class SkippedTests {
 
     @Disabled
     @Test
-    @Tag("simple")
     void simpleTest6() {
         assertTrue(true);
     }
 
     @Disabled
     @Test
-    @Tag("simple")
     void simpleTest7() {
         assertTrue(true);
     }
