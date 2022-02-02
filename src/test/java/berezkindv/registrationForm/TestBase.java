@@ -25,7 +25,7 @@ public class TestBase {
         String url = System.getProperty("url", "selenoid.autotests.cloud/wd/hub");
         String browser = System.getProperty("browser", "chrome");
         String browserVersion = System.getProperty("version", "91");
-        String browserSize = System.getProperty("browserSize", "800x600");
+        String browserSize = System.getProperty("browserSize", "1920x1080");
         String remoteUrl = "https://" + login + ":" + password + "@" + url;
 
         Configuration.browser = browser;
