@@ -42,7 +42,7 @@ tasks.withType(Test) {
     systemProperties(System.getProperties()) // основная команда для работы со значениями задаваемыми через терминал
 
 //    systemProperty("browser", "safari") // жестко задаем переменной browser значение safari // нельза поменять даже из терминала
-//    systemProperty("enviroment", System.getProperty("enviroment", "stage")) // строка для разделения запуска на разных окружениях
+//    systemProperty("environment", System.getProperty("environment", "stage")) // строка для разделения запуска на разных окружениях
 
     testLogging {
         lifecycle {
@@ -56,5 +56,11 @@ tasks.withType(Test) {
 task simple_tests(type: Test) {
     useJUnitPlatform{
         includeTags "simple"
+    }
+}
+
+task properties_tests(type: Test) {
+    useJUnitPlatform{
+        includeTags "properties"
     }
 }
