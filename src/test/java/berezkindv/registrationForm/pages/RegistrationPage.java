@@ -39,7 +39,7 @@ public class RegistrationPage {
         return this;
     }
 
-    @Step("Вводим Имя пользователя")
+    @Step("Вводим имя пользователя")
     public RegistrationPage typeFirstName(String value) {
         firstNameInput.setValue(value);
         return this;
