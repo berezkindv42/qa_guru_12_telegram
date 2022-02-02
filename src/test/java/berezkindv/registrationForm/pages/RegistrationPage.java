@@ -110,7 +110,7 @@ public class RegistrationPage {
 
     @Step("Нажымаем кнопку \"Отправить\"")
     public void pushSubmitButton() {
-        submitButtonPush.click();
+        submitButtonPush.scrollTo().click();
     }
     @Step("Проверяем, что окно подтверждения данных открылось")
     public RegistrationPage assertFormTitle(String title) {
