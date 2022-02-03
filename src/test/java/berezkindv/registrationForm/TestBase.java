@@ -14,12 +14,18 @@ public class TestBase {
     @Step("Конфигурируем браузер и удаленный запуск")
     static void beforeAllMethod() {
 
-        String login = System.getProperty("login");
-        String password = System.getProperty("password");
-        String url = System.getProperty("url");
-        String browser = System.getProperty("browser");
-        String browserVersion = System.getProperty("version");
-        String browserSize = System.getProperty("browserSize");
+//        String login = System.getProperty("login");
+//        String password = System.getProperty("password");
+//        String url = System.getProperty("url");
+//        String browser = System.getProperty("browser");
+//        String browserVersion = System.getProperty("version");
+//        String browserSize = System.getProperty("browserSize");
+        String login = System.getProperty("login", "user1");
+        String password = System.getProperty("password", "1234");
+        String url = System.getProperty("url", "selenoid.autotests.cloud/wd/hub");
+        String browser = System.getProperty("browser", "chrome");
+        String browserVersion = System.getProperty("version", "91");
+        String browserSize = System.getProperty("browserSize", "1920x1080");
         String remoteUrl = "https://" + login + ":" + password + "@" + url;
 
         Configuration.browser = browser;

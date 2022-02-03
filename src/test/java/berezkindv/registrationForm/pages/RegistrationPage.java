@@ -39,7 +39,7 @@ public class RegistrationPage {
         return this;
     }
 
-    @Step("Вводим Имя пользователя")
+    @Step("Вводим имя пользователя")
     public RegistrationPage typeFirstName(String value) {
         firstNameInput.setValue(value);
         return this;
@@ -110,7 +110,7 @@ public class RegistrationPage {
 
     @Step("Нажымаем кнопку \"Отправить\"")
     public void pushSubmitButton() {
-        submitButtonPush.click();
+        submitButtonPush.scrollTo().click();
     }
     @Step("Проверяем, что окно подтверждения данных открылось")
     public RegistrationPage assertFormTitle(String title) {
