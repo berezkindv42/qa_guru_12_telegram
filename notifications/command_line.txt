@@ -1,4 +1,7 @@
 ########### LOCAL TELEGRAM
+
+java "-DprojectName=Local run" "-Denv=https://qa.guru" "-DreportLink=https://no.link/" "-Dcomm=Any comment here" "-Dconfig.file=./notifications/telegram_config_local.json" -jar ./notifications/allure-notifications-3.1.2.jar
+
 java  \
 "-DprojectName=Local run" \
 "-Denv=https://qa.guru" \
@@ -49,18 +52,3 @@ FILE=./allure-notifications-3.1.2.jar
 if [ ! -f "$FILE" ]; then
    wget https://github.com/qa-guru/allure-notifications/releases/download/3.1.2/allure-notifications-3.1.2.jar
 fi
-
-########### GMAIL
-java  \
-"-Dmessenger=email" \
-"-Dmail.host=smtp.gmail.com" \
-"-Dmail.port=465" \
-"-Dmail.username=***@gmail.com" \
-"-Dmail.password=***” \
-"-Dmail.to=***@gmail.com" \
-"-DprojectName=${PROJECT_NAME}" \
-"-DreportLink=${BUILD_URL}" \
-"-Dlang=en" \
-"-Denable.chart=true" \
-"-Dallure.report.folder=./allure-report/" \
--jar ../allure-notifications-3.1.2.jar
